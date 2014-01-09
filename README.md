@@ -2,10 +2,10 @@
 
 ## Requirement
 
-	- ruby
-	- shoes
+- ruby
+- shoes
 
 ```
-	git clone https://github.com/flug/gractivity
+        git clone https://github.com/flug/gractivity.git
 
 ```
