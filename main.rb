@@ -14,5 +14,12 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 150,  :resizable =
 		end
 	end
 
+	stack :margin => 12, :height => 50 do
+		flow do
+
+			@list = list_box :items => ['Debian', 'Fedora']
+		end
+
+	end
 end
 
