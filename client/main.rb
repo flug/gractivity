@@ -10,8 +10,11 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 150,  :resizable =
 		para "Enter you token"
 		flow do
 			edit_line 
-			button "Save"
+			button "Save" do
+			end
 		end
+		
+
 	end
 
 	stack :margin => 12, :height => 50 do
