@@ -20,7 +20,7 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable 
 	stack :margin => 12, :height => 50 do
 		flow do
 
-			@list = list_box :items => ['Debian', 'Fedora']
+			@list = list_box :items => ['Gnome', 'KDE']
 		end
 
 	end
