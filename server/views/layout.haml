@@ -1,0 +1,19 @@
+!!!
+/[if lte IE 7] <html class="no-js ie67 ie678" lang="fr">
+/[if IE 8] <html class="no-js ie8 ie678" lang="fr">
+/[if IE 9] <html class="no-js ie9" lang="fr">
+/ [if gt IE 9]> <!
+%html.no-js{lang: "fr"}
+  / <![endif]
+  %head
+    %meta{charset: "UTF-8"}/
+    /[if IE] <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    %title Gractivity
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    /[if lt IE 9]
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    %link{href: "/css/styles.css", media: "all", rel: "stylesheet"}/
+  %body
+    .container 
+      = yield
+

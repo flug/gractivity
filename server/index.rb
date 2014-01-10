@@ -25,3 +25,23 @@ class CoffeeHandler < Sinatra::Base
 	end
 
 end
+
+class Gractivity < Sinatra::Base
+
+	use SassHandler
+	use CoffeeHandler
+	set :public, File.dirname(__FILE__) + "/public"
+	set :views , File.dirname(__FILE__) + "/views"
+	get "/" do
+		haml  :index
+	end
+	post "/" do
+		
+		@data = "ok"
+		haml  :index
+	end
+end
+
+if __FILE__ == $0
+	Gractivity.run! :port => 4567
+end
