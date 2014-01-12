@@ -1,6 +1,7 @@
 #!/usr/bin/env shoes
 
 require 'yaml'
+require_relative './lib/configuration.rb'
 
 Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable => false  do
 
@@ -8,6 +9,8 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable 
 
 	KDE = ".kde"
 	GNOME = ".gnome"
+	configuration  = Configuration.new
+
 	stack :margin => 12 do
 
 		flow  do
@@ -22,29 +25,16 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable 
 			@token  = edit_line
 			button "Save" do
 				if not @token.text.empty?  || @list.text.empty?
-					begin
 
-						if @list.text == 'Gnome'
-							activity =  GNOME
-						else
-							activity = KDE
-						end
-						@prepare = Hash.new
-						@prepare['configuration']  =  { 'token' =>  @token.text, 'activity' => activity }
-
-						file = File.open(File.expand_path(CONFIGURATION_FILE), "w")
-						file.write @prepare.to_yaml
-					rescue IOError => e
-						alert "Error on save you profile configuration"
-					ensure
-						file.close unless file == nil
+					if @list.text == 'Gnome'
+						activity =  GNOME
+					else
+						activity = KDE
 					end
-				else
-					alert "you must specify the configuration"
+					configuration.save @token.text, activity
 				end
 			end
 		end
-	end
 
 	stack :margin => 12 , :height => 50, :top  => 120   do
 		flow  do
