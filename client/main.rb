@@ -35,13 +35,13 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable 
 			end
 		end
 
-	stack :margin => 12 , :height => 50, :top  => 120   do
-		flow  do
-			button "Backup" do
-			end
-			button "Restore", :left => 70  do
-			end
+		stack :margin => 12 , :height => 50, :top  => 120   do
+			flow  do
+				button "Backup" do
+				end
+				button "Restore", :left => 70  do
+				end
 
+			end
 		end
 	end
-end
