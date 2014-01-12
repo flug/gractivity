@@ -4,7 +4,7 @@ require 'yaml'
 
 Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable => false  do
 
-	CONFIGURATION_FILE = ".config_gractivity.yml"
+	CONFIGURATION_FILE = "~/.config_gractivity.yml"
 
 	KDE = ".kde"
 	GNOME = ".gnome"
