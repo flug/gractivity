@@ -12,6 +12,7 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable 
 
 		flow  do
 
+			para "Choice you activity"
 			@list = list_box :items => ['Gnome', 'KDE']
 		end
 
