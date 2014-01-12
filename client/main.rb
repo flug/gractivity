@@ -1,5 +1,4 @@
 #!/usr/bin/env shoes
-
 require 'yaml'
 require_relative './lib/configuration.rb'
 
