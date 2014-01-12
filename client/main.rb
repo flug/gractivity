@@ -55,6 +55,4 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable 
 
 		end
 	end
-
-
 end
