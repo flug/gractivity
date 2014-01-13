@@ -35,4 +35,12 @@ class Configuration
 		end
 
 	end
+	def exist?
+		configuration_file =  File.expand_path @@path_file_configuration
+		return File.exist? configuration_file
+	end
+	
+	def file_configuration
+		return File.expand_path @@path_file_configuration
+	end
 end
