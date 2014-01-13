@@ -1,8 +1,9 @@
 #!/usr/bin/env shoes
 require 'yaml'
 require_relative './lib/configuration.rb'
+require_relative './lib/zipper.rb'
 
-Shoes.app :title => "Gractivity",  :width => 300 , :height => 170 ,  :resizable => false  do
+Shoes.app :title => "Gractivity",  :width => 300 , :height => 180 ,  :resizable => false  do
 
 	CONFIGURATION_FILE = "~/.config_gractivity.yml"
 
