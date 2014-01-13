@@ -2,6 +2,9 @@
 require 'yaml'
 require_relative './lib/configuration.rb'
 require_relative './lib/zipper.rb'
+require 'rubygems'
+require 'zip/zip'
+
 
 Shoes.app :title => "Gractivity",  :width => 300 , :height => 180 ,  :resizable => false  do
 
