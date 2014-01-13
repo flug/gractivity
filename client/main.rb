@@ -50,7 +50,7 @@ Shoes.app :title => "Gractivity",  :width => 300 , :height => 180 ,  :resizable 
 						if configuration.exist?
 							directory  = File.expand_path '~/'+ activity
 							zipfile_name  = '/tmp/'+ activity[1, activity.length] +'.tgz'
-							alert "Save end"  if  system('tar cvzf '+zipfile_name  +' '+directory)
+							alert "Save end"  if  system('tar czf '+zipfile_name  +' '+directory)
 
 						end
 					end
