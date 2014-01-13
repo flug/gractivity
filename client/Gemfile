@@ -1,5 +1,3 @@
 # A sample Gemfile
 source "https://rubygems.org"
-gem "zip"
-gem "fileutils"
-
+gem 'rubyzip', :require => 'zip/zip'
